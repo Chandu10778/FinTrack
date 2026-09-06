@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>FinTrack - Transactions & Budgets</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                F
+            </div>
+
+            <span>
+                FinTrack
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="index.html"
+                class="nav-item">
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="transactions.html"
+                class="nav-item active">
+
+                <span class="nav-icon">
+                    ↕
+                </span>
+
+                <span>
+                    Transactions
+                </span>
+
+            </a>
+
+
+            <a
+                href="#budgets"
+                class="nav-item">
+
+                <span class="nav-icon">
+                    ◫
+                </span>
+
+                <span>
+                    Budgets
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="#"
+                class="nav-item">
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item">
+
+                <span class="nav-icon">
+                    ?
+                </span>
+
+                <span>
+                    Help
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn">
+
+                    ☰
+
+                </button>
+
+
+                <div>
+
+                    <h1>
+                        Transactions & Budgets
+                    </h1>
+
+                    <p class="header-subtitle">
+                        Manage your money and spending plans
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button
+                    class="header-icon-btn"
+                    title="Search">
+
+                    🔍
+
+                </button>
+
+
+                <button
+                    class="header-icon-btn"
+                    title="Notifications">
+
+                    🔔
+
+                </button>
+
+
+                <button class="profile-btn">
+
+                    <div class="profile-avatar">
+                        C
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Chandu
+                        </strong>
+
+                        <span>
+                            Personal
+                        </span>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             PAGE CONTENT
+        ====================================== -->
+
+        <section class="page-content">
+
+
+            <!-- TITLE -->
+
+            <div class="page-title-section">
+
+                <div>
+
+                    <h2>
+                        Financial Management
+                    </h2>
+
+                    <p>
+                        View transactions and manage category budgets.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="pageAddTransactionBtn">
+
+                    +
+                    Add Transaction
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 TRANSACTIONS PANEL
+            ================================== -->
+
+            <section class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h3>
+                            All Transactions
+                        </h3>
+
+                        <p>
+                            Search, filter and manage your transactions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="transaction-filters">
+
+
+                    <div class="search-box">
+
+                        <span>
+                            🔍
+                        </span>
+
+                        <input
+                            type="text"
+                            id="allTransactionSearch"
+                            placeholder="Search transactions...">
+
+                    </div>
+
+
+                    <select id="allCategoryFilter">
+
+                        <option value="all">
+                            All Categories
+                        </option>
+
+                        <option value="Food">
+                            Food
+                        </option>
+
+                        <option value="Shopping">
+                            Shopping
+                        </option>
+
+                        <option value="Transport">
+                            Transport
+                        </option>
+
+                        <option value="Bills">
+                            Bills
+                        </option>
+
+                        <option value="Entertainment">
+                            Entertainment
+                        </option>
+
+                        <option value="Health">
+                            Health
+                        </option>
+
+                        <option value="Salary">
+                            Salary
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+                    <select id="allTypeFilter">
+
+                        <option value="all">
+                            All Types
+                        </option>
+
+                        <option value="income">
+                            Income
+                        </option>
+
+                        <option value="expense">
+                            Expense
+                        </option>
+
+                    </select>
+
+
+                    <select id="allSortFilter">
+
+                        <option value="newest">
+                            Newest First
+                        </option>
+
+                        <option value="oldest">
+                            Oldest First
+                        </option>
+
+                        <option value="highest">
+                            Highest Amount
+                        </option>
+
+                        <option value="lowest">
+                            Lowest Amount
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="table-container">
+
+                    <table class="transactions-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Merchant
+                                </th>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+
+                                <th>
+                                    Type
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="allTransactionsBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div
+                    id="allEmptyState"
+                    class="empty-state hidden">
+
+                    <div class="empty-icon">
+                        📭
+                    </div>
+
+                    <h3>
+                        No transactions found
+                    </h3>
+
+                    <p>
+                        Try changing your filters.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 BUDGET SECTION
+            ================================== -->
+
+            <section
+                class="panel"
+                id="budgets"
+                style="margin-top: 20px;">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h3>
+                            Monthly Budgets
+                        </h3>
+
+                        <p>
+                            Track spending against your category limits.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="budgetList"
+                    class="budget-list">
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================
+     TRANSACTION MODAL
+========================================= -->
+
+<div
+    id="transactionModal"
+    class="modal-overlay hidden">
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>
+                    Add Transaction
+                </h2>
+
+                <p>
+                    Add a new income or expense.
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="closeModalBtn">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <form id="transactionForm">
+
+
+            <div class="form-group">
+
+                <label for="merchant">
+                    Merchant / Description
+                </label>
+
+                <input
+                    type="text"
+                    id="merchant"
+                    required
+                    placeholder="e.g. Amazon">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="amount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    min="1"
+                    required
+                    placeholder="e.g. 2500">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="transactionCategory">
+                    Category
+                </label>
+
+                <select
+                    id="transactionCategory"
+                    required>
+
+                    <option value="">
+                        Select category
+                    </option>
+
+                    <option value="Food">
+                        Food
+                    </option>
+
+                    <option value="Shopping">
+                        Shopping
+                    </option>
+
+                    <option value="Transport">
+                        Transport
+                    </option>
+
+                    <option value="Bills">
+                        Bills
+                    </option>
+
+                    <option value="Entertainment">
+                        Entertainment
+                    </option>
+
+                    <option value="Health">
+                        Health
+                    </option>
+
+                    <option value="Salary">
+                        Salary
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="transactionType">
+                    Transaction Type
+                </label>
+
+                <select
+                    id="transactionType"
+                    required>
+
+                    <option value="">
+                        Select type
+                    </option>
+
+                    <option value="income">
+                        Income
+                    </option>
+
+                    <option value="expense">
+                        Expense
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="transactionDate">
+                    Date
+                </label>
+
+                <input
+                    type="date"
+                    id="transactionDate"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="transactionStatus">
+                    Status
+                </label>
+
+                <select
+                    id="transactionStatus">
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="cancelModalBtn">
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    Add Transaction
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     DETAIL / EDIT MODAL
+========================================= -->
+
+<div
+    id="detailModal"
+    class="modal-overlay hidden">
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>
+                    Transaction Details
+                </h2>
+
+                <p>
+                    View or edit transaction information.
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="closeDetailModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <form id="editTransactionForm">
+
+            <input
+                type="hidden"
+                id="editTransactionId">
+
+
+            <div class="form-group">
+
+                <label for="editMerchant">
+                    Merchant / Description
+                </label>
+
+                <input
+                    type="text"
+                    id="editMerchant"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="editAmount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="editAmount"
+                    min="1"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="editCategory">
+                    Category
+                </label>
+
+                <select id="editCategory">
+
+                    <option value="Food">
+                        Food
+                    </option>
+
+                    <option value="Shopping">
+                        Shopping
+                    </option>
+
+                    <option value="Transport">
+                        Transport
+                    </option>
+
+                    <option value="Bills">
+                        Bills
+                    </option>
+
+                    <option value="Entertainment">
+                        Entertainment
+                    </option>
+
+                    <option value="Health">
+                        Health
+                    </option>
+
+                    <option value="Salary">
+                        Salary
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="editType">
+                    Type
+                </label>
+
+                <select id="editType">
+
+                    <option value="income">
+                        Income
+                    </option>
+
+                    <option value="expense">
+                        Expense
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="editDate">
+                    Date
+                </label>
+
+                <input
+                    type="date"
+                    id="editDate"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="editStatus">
+                    Status
+                </label>
+
+                <select id="editStatus">
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="deleteDetailBtn">
+
+                    Delete
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/data.js"></script>
+
+<script src="js/app.js"></script>
+
+<script src="js/transactions.js"></script>
+
+</body>
+
+</html>
