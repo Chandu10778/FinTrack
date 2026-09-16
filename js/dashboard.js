@@ -12,6 +12,7 @@ let currentMonth = "2026-09";
 const balanceValue =
     document.getElementById("balanceValue");
 
+
 const incomeValue =
     document.getElementById("incomeValue");
 
