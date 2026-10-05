@@ -4,6 +4,7 @@ FinTrack is a simple and user-friendly personal finance tracking web application
 
 It helps users manage their income and expenses, monitor budgets, and understand their spending habits through an easy-to-use dashboard.
 
+
 ## 🚀 Features
 
 - 📊 Financial dashboard
