@@ -7,6 +7,7 @@ It helps users manage their income and expenses, monitor budgets, and understand
 
 ## 🚀 Features
 
+
 - 📊 Financial dashboard
 - 💰 Track income and expenses
 - 🧾 Add and manage transactions
